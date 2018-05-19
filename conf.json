@@ -1,0 +1,18 @@
+[
+  {
+    "path":"/product/{id:[0-9]+}",
+    "redirect":"http://localhost:8081/company/10/product/{id}",
+    "timeout":10,
+    "keepAlive":10,
+    "methods":["GET"],
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOiJzdXBlcl91c2VyIiwiZXhwIjoyNTIyNzcwODgyfQ.-wDTI9hDR-hprujVTu-ZJBwzdu7M4xF9BZNMRYhdHGg"
+  },
+  {
+    "path":"/product",
+    "redirect":"http://localhost:8081/company/10/product",
+    "timeout":10,
+    "keepAlive":10,
+    "methods":["POST"],
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOiJzdXBlcl91c2VyIiwiZXhwIjoyNTIyNzcwODgyfQ.-wDTI9hDR-hprujVTu-ZJBwzdu7M4xF9BZNMRYhdHGg"
+  }
+]
