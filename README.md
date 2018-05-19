@@ -5,7 +5,7 @@ I used Golang because of its great concurency ability and because it can be comp
 
 1) A configurable reverse proxy as a client gateway.
 This is built as a reverse proxy you can configure with a json file.
-To add an endpoint, add a new object in the config file.
+To add an endpoint, add a new object in the config file. You can find the config file on the root of the project (conf.json) to see how it is built. This could change and get more complex in the future.
 To get them working, the service has to be restarted, but a endpoint could be added to add new endpoints without restarting the server. This would add complexity but flexibility.
 Each path has a proxy redirect to the server gateway. This is built in a preconceived notion that a load balancing mechanism is in front of it.
 If the object has the parameter dumb_proxy set to true, only the scheme and host needs to be set in the redirect, the original requestURI would follow.
@@ -34,7 +34,9 @@ Unit testing. Unfortunately I didn't add any unit testing because of time constr
 To start the project, in 3 different terminal from the root of the project (where the readme is) do:
 
 ./cmd/client/bin -port 8080 -config "conf.json"
+
 ./cmd/server/bin -port 8081 -jwtsecret "secret" -service "http://localhost:8082"
+
 ./cmd/mockservice/bin -port 8082
 
 Flags can be modified but I suggest not to. More endpoint can easily be added to the config file, but no endpoints will be set for them in the server and mock service. They will return 404.
